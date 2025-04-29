@@ -2,7 +2,7 @@
 
 A cloud-native, microservice-based financial management platform that enables users to track income, expenses, savings, and gain actionable financial insights.
 
-Features
+# Features
 
 Secure OAuth2-based user authentication and authorization.
 
@@ -14,7 +14,7 @@ Scheduled notifications and financial reminders.
 
 Fully containerized using Docker for easy deployment.
 
-Microservices Overview
+# Microservices Overview
 
 Auth Service: Handles user registration, login, and OAuth2-based security.
 
@@ -24,7 +24,7 @@ Statistics Service: Processes and stores normalized time-series data for financi
 
 Notification Service: Sends scheduled notifications based on user-defined preferences.
 
-Infrastructure Components
+# Infrastructure Components
 
 API Gateway: Routes and filters external requests to appropriate services using Spring Cloud Gateway.
 
@@ -36,7 +36,7 @@ Circuit Breaker and Resilience: Handled with Resilience4j to ensure fault tolera
 
 Distributed Tracing and Logging: Integrated with Micrometer and OpenTelemetry for observability.
 
-Tech Stack
+# Tech Stack
 
 Languages: Java
 
