@@ -1,0 +1,5 @@
+services\cashflow\auth\AuthServiceApplicationTests.class
+services\cashflow\auth\controller\UserControllerTest.class
+services\cashflow\auth\service\UserServiceTest.class
+services\cashflow\auth\repository\UserRepositoryTest.class
+services\cashflow\auth\service\security\MongoUserDetailsServiceTest.class

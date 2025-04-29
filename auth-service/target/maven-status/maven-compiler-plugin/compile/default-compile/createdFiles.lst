@@ -1,0 +1,9 @@
+services\cashflow\auth\config\WebSecurityConfig.class
+services\cashflow\auth\repository\UserRepository.class
+services\cashflow\auth\service\UserServiceImpl.class
+services\cashflow\auth\config\OAuth2AuthorizationConfig.class
+services\cashflow\auth\AuthApplication.class
+services\cashflow\auth\controller\UserController.class
+services\cashflow\auth\service\UserService.class
+services\cashflow\auth\domain\User.class
+services\cashflow\auth\service\security\MongoUserDetailsService.class
