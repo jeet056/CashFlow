@@ -11,8 +11,8 @@
 	<description>Turbine Stream Service</description>
 
 	<parent>
-		<groupId>com.piggymetrics</groupId>
-		<artifactId>piggymetrics</artifactId>
+		<groupId>services.cashflow</groupId>
+		<artifactId>cashflow</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
