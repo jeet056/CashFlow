@@ -20,16 +20,12 @@ services:
         max-size: "10m"
         max-file: "10"
 
-  registry:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-    image: sqshq/piggymetrics-registry
+  consul:
+    image: consul:1.15
     restart: always
-    depends_on:
-      config:
-        condition: service_healthy
     ports:
-      - 8761:8761
+      - 8500:8500
+    command: agent -server -bootstrap-expect=1 -ui -client=0.0.0.0
     logging:
       options:
         max-size: "10m"
@@ -43,6 +39,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     ports:
       - 80:4000
     logging:
@@ -62,6 +60,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     logging:
       options:
         max-size: "10m"
@@ -87,6 +87,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     logging:
       options:
         max-size: "10m"
@@ -113,6 +115,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     logging:
       options:
         max-size: "10m"
@@ -138,6 +142,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     logging:
       options:
         max-size: "10m"
@@ -161,6 +167,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     ports:
       - 9000:8080
     logging:
@@ -176,6 +184,8 @@ services:
     depends_on:
       config:
         condition: service_healthy
+      consul:
+        condition: service_started
     ports:
     - 8989:8989
     logging:

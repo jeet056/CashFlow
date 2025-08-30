@@ -9,8 +9,11 @@ services:
     ports:
       - 8888:8888
 
-  registry:
-    build: registry
+  consul:
+    image: consul:1.15
+    ports:
+      - 8500:8500
+    command: agent -server -bootstrap-expect=1 -ui -client=0.0.0.0
 
   gateway:
     build: gateway
